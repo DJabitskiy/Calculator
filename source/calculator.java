@@ -8,6 +8,7 @@ public class calculator {
 
    JPanel windowContent;
    JTextField displayField;
+   JButton button0;
    JButton buttonPoint;
    JButton buttonEqual;
    JButton buttonplus;
@@ -28,7 +29,7 @@ public class calculator {
       int i, n = 9;
       n++;
       JButton[] buttons = new JButton[n];
-      for (i = 0; i < n; i++) {
+      for (i = 1; i < n; i++) {
          buttons[i] = new JButton("" + i);
          buttons[i].addActionListener(engine);
          p1.add(buttons[i]);
@@ -39,6 +40,9 @@ public class calculator {
       displayField = new JTextField(30);
       displayField.setHorizontalAlignment(SwingConstants.RIGHT);
       windowContent.add("North", displayField);
+      button0 = new JButton("0");
+      button0.addActionListener(engine);
+      p1.add(button0);
       buttonPoint = new JButton(".");
       buttonPoint.addActionListener(engine);
       buttonEqual = new JButton("=");
