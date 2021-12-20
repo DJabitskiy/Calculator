@@ -15,6 +15,7 @@ public class calculator {
    JButton buttonminus;
    JButton buttonmultiplication;
    JButton buttondivision;
+   JButton C;
    JPanel p1;
    JPanel p2;
 
@@ -22,9 +23,10 @@ public class calculator {
       calcengine engine = new calcengine(this);
       p1 = new JPanel();
       p2 = new JPanel();
-      GridLayout gl = new GridLayout(4, 3);
-      p1.setLayout(gl);
-      p2.setLayout(gl);
+      GridLayout gl1 = new GridLayout(4, 2);
+      GridLayout gl2 = new GridLayout(5, 2);
+      p1.setLayout(gl1);
+      p2.setLayout(gl2);
 
       int i, n = 9;
       n++;
@@ -49,6 +51,9 @@ public class calculator {
       buttonEqual.addActionListener(engine);
       p1.add(buttonPoint);
       p1.add(buttonEqual);
+      C = new JButton("C");
+      C.addActionListener(engine);
+      p2.add(C);
       buttonplus = new JButton("+");
       buttonplus.addActionListener(engine);
       p2.add(buttonplus);
